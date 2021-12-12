@@ -176,7 +176,7 @@ main h2.card .play {
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   color: #523eb2;
-  background: linear-gradient(120deg, #aca1e2 5%, #fefefe 70%);
+  background: linear-gradient(120deg, #d9bde8 5%, #fefefe 70%);
 }
 .learners {
   font-size: 1.6rem;
@@ -238,7 +238,7 @@ main p {
   font-weight: 400;
 }
 h3 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
 }
 .wiggle-card {
@@ -1046,7 +1046,7 @@ footer a {
     font-size: 45%;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   html {
     font-size: 40%;
   }
