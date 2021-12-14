@@ -514,16 +514,6 @@ h3 {
   fill: white;
 }
 
-/* .hear {
-  position: relative;
-  width: 75vw;
-  margin: 4rem auto;
-}
-.hear .disFlex {
-  overflow: scroll;
-  justify-content: left;
-  gap: 2rem;
-} */
 .others {
   border-radius: 1rem;
   padding: 3rem;
@@ -1178,6 +1168,13 @@ footer a {
   .price {
     display: none;
   }
+  .price .grey {
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    display: block;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
   .rating {
     flex-direction: row;
   }
@@ -1427,6 +1424,10 @@ footer a {
     font-size: 1.7rem;
   } */
 
+  h3.gradText,
+  h1.gradText {
+    font-size: 2.4rem !important;
+  }
   main h2.card {
     width: 92vw;
   }
@@ -1443,7 +1444,7 @@ footer a {
     background-color: white;
   }
   .logo {
-    width: 13.5rem;
+    width: 15rem;
   }
   .buttons {
     gap: 0.7rem;
@@ -1451,9 +1452,8 @@ footer a {
   .login,
   .sign-up {
     padding: 0rem 0.6rem;
-    height: 3rem;
-
-    font-size: 1.5rem;
+    height: 4rem;
+    font-size: 1.7rem;
   }
   .buttons.disFlex {
     gap: 0;
@@ -1462,13 +1462,17 @@ footer a {
   .login {
     border: 0.1rem solid #b671cf;
     border-radius: 0.5rem 0 0 0.5rem;
-    width: 5rem;
+    width: 5.5rem;
     padding-right: 0.2rem;
   }
   .sign-up {
     margin-right: 1rem;
-    width: 7rem;
+    width: 8rem;
     border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .menu {
+    width: 4rem;
+    margin-left: 1rem;
   }
 
   main {
@@ -1481,7 +1485,7 @@ footer a {
   }
   .python {
     padding: 2rem 3rem;
-    height: 75vh;
+    height: 68rem;
     margin-bottom: 0rem !important;
   }
   .python,
@@ -1538,8 +1542,9 @@ footer a {
   .recipe .card {
     padding-right: 0;
     margin-top: 11rem;
+    margin-bottom: 0;
     padding-left: 0;
-    height: 50vh;
+    height: 53rem;
   }
   .recipe .card .disFlex {
     height: auto;
@@ -1568,7 +1573,7 @@ footer a {
     width: 34rem !important;
     top: -50% !important;
     left: 50% !important;
-    transform: translate(-50%, 60%) !important;
+    transform: translate(-50%, 75%) !important;
     border-radius: 0.5rem !important;
     box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
   }
@@ -1580,6 +1585,7 @@ footer a {
     transform: translate(-2.6%);
     width: 100vw;
     background-color: #ededfd;
+    margin-top: 2rem;
   }
 
   .money-back {
@@ -1605,7 +1611,7 @@ footer a {
     font-weight: 500;
   }
   .know-more {
-    margin-top: 2rem !important;
+    margin-top: 4rem !important;
     border-radius: 1rem;
     width: 22rem;
   }
@@ -1613,14 +1619,18 @@ footer a {
   .video-section {
     background-color: #ededfd;
     margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 4rem;
   }
 
   .curriculum {
-    padding-top: 2rem;
-    background: linear-gradient(to bottom, #ededfd 13%, #fff 5%);
+    padding-top: 6rem;
+    background: linear-gradient(to bottom, #ededfd 16%, #fff 5%);
   }
   .curriculum .card:first-of-type {
     padding: 1.5rem;
+    font-weight: 400;
+    border-radius: 2rem;
   }
   .curriculum-grid {
     row-gap: 1.5rem;
@@ -1629,42 +1639,59 @@ footer a {
   .project {
     background: linear-gradient(to bottom, #fff 50%, #b671cf 50%);
     margin-bottom: 0;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .hear {
+    background: linear-gradient(to bottom, #ecd9ec 50%, #fff 50%);
+    margin-top: -1.5rem;
+    padding-top: 2rem;
   }
   .others {
-    height: 31rem;
-    width: 28rem;
+    height: 36rem;
+    width: 32rem;
     padding: 2rem;
     margin: 3rem 1rem;
     box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
   }
   .others img {
-    width: 5.5rem;
+    width: 7.5rem;
     margin-right: 1rem;
   }
   .others .intro {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
   .grey {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .others p {
-    font-size: 1.3rem;
-    margin-left: 4rem;
+    font-size: 1.5rem;
+    margin-left: 5rem;
     width: 80%;
   }
-  .next-btn {
-    width: 40px;
-    height: 40px;
+  #slides {
+    max-width: calc(100% - 120px);
   }
-  .next-btn svg {
-    width: 50%;
+  #frame1:checked ~ #slides .inner {
+    margin-left: 0;
+  }
+
+  #frame2:checked ~ #slides .inner {
+    margin-left: -36rem;
+  }
+
+  #frame3:checked ~ #slides .inner {
+    margin-left: -72rem;
+  }
+
+  #frame4:checked ~ #slides .inner {
+    margin-left: -108rem;
   }
 
   .other-courses-sec {
     background: linear-gradient(to bottom, #b671cf, #3a30aa);
-    margin-top: 0;
+    margin-top: -4rem;
     margin-bottom: -2rem;
   }
   .other-courses {
@@ -1673,9 +1700,7 @@ footer a {
     background: none;
     padding-top: 1.6rem;
   }
-  h3.gradText {
-    font-size: 2.2rem;
-  }
+
   .intrest {
     background-clip: unset;
     background: none;
@@ -1683,7 +1708,7 @@ footer a {
     padding-top: 2.2rem;
   }
   .other-courses-card {
-    width: 36rem;
+    width: 38rem;
     height: 22rem;
     margin: 2rem auto;
     border-radius: 2rem;
@@ -1692,17 +1717,17 @@ footer a {
 
   .other-courses-card h3 {
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .other-courses-card span {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .other-courses-card p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
   }
   .other-courses-card .btn-light {
-    margin-top: 0.1rem;
+    margin-top: 0.3rem;
     padding: 0px;
     background-color: #8a158a;
     border-radius: 2rem;
@@ -1718,48 +1743,55 @@ footer a {
     height: 9rem;
     font-size: 1.8rem;
   }
-
   .other-courses-card::after {
     right: 2%;
   }
 
   .bgc-2 {
-    background: linear-gradient(to bottom, #3a30aa 55%, #fff 45%);
+    background: linear-gradient(to bottom, #3a30aa 35%, #ecd9ec 30%);
   }
   .course-benefits h3.gradText {
     -webkit-text-fill-color: white;
     margin-bottom: 1rem;
   }
+  .course-benefits .disFlex p {
+    line-height: 4rem;
+  }
 
+  .about-course-sec {
+    background: linear-gradient(to bottom, #fff 70%, #ecd9ec 50%);
+  }
   .query {
-    color: white;
-    margin-top: 0;
+    margin-top: -6rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    background: #ecd9ec;
   }
-  .query h3 {
-    background-clip: unset;
-    background: none;
-    -webkit-text-fill-color: white;
-  }
+
   .query-asked {
-    width: 28rem;
-    height: 4rem;
+    width: 32rem;
+    height: 4.5rem;
     margin: 1.5rem auto;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
   }
   .query-asked button {
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 0 0.8rem 0.8rem 0;
   }
   .search {
-    width: 30rem;
-    height: 3.8rem;
+    width: 37rem;
+    height: 4.5rem;
     margin: 3rem auto;
     border-radius: 0.8rem;
     background-color: #fff;
     z-index: 0;
     justify-content: flex-start;
+  }
+  .search input {
+    width: 28rem;
   }
   .search-ico {
     background-color: #fff;
@@ -1778,8 +1810,8 @@ footer a {
     z-index: -1;
   }
   .search button {
-    width: 4.2rem;
-    height: 4rem;
+    width: 5rem;
+    height: 4.6rem;
     top: -0.1rem;
     border-radius: 0 0.8rem 0.8rem 0;
   }
