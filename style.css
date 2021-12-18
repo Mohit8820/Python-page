@@ -470,6 +470,7 @@ h3 {
 .curriculum .steps {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 2rem;
   margin-top: 0;
   margin-bottom: 6rem;
@@ -478,13 +479,62 @@ h3 {
   padding: 4rem;
 }
 .curriculum .steps div {
+  cursor: pointer;
   background-color: #fff;
-  padding: 1rem;
-  font-size: 1.8rem;
   border-radius: 1rem;
   text-align: left;
   font-weight: 500;
+  box-shadow: rgb(0, 0, 0, 25%) 0px 2px 5px;
 }
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  border: none;
+  color: #3a30aa;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  text-align: left;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active {
+  border-radius: 1rem 1rem 0 0;
+}
+.collapsible:after {
+  content: "\002B";
+  background: linear-gradient(to bottom, #b671cf, #3a30aa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  width: 2rem;
+  height: 2rem;
+  /* text-align: center;
+  border: white 0.3rem solid;
+  border-radius: 50%; */
+}
+
+.active:after {
+  content: "\2212";
+}
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0rem 4rem;
+  max-height: 0;
+  font-size: 1.6rem;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+  box-shadow: none !important;
+  /* background-color: #f1f1f1; */
+}
+/****************collapsible************************/
 
 .project .card {
   height: 45rem;
@@ -1301,12 +1351,36 @@ footer a {
     width: 97vw;
     font-weight: 400;
   }
-  .steps div {
+  .steps .collapsible {
     border-radius: 1rem;
     background: linear-gradient(to bottom, #b671cf, #3a30aa);
     color: white;
   }
-  .curriculum button {
+  .collapsible::after {
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: white;
+  }
+  .steps .active {
+    background: linear-gradient(to bottom, #b671cf, #3a30aa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .active::after {
+    background: linear-gradient(to bottom, #b671cf, #3a30aa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .content {
+    background: linear-gradient(to bottom, #b671cf, #3a30aa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .curriculum button.mview {
     background-color: #8a158a;
     color: white;
     padding: 1rem 4rem;

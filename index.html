@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -282,15 +284,80 @@
         </div>
       </div>
       <div class="card steps">
-        <div>Basic Python concepts</div>
-        <div>Control Structures in Python</div>
-        <div>Function and Modules in Python</div>
-        <div>Except Handling and File Handling in python</div>
-        <div>See more types in python</div>
-        <div>Functional programming in python</div>
-        <div>Object Oriented programming in python</div>
-        <div>Regular expressions</div>
-        <div>Create GUI</div>
+        <div>
+          <button type="button" class="collapsible">Introduction</button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Basic Python concepts
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Control Structures in Python
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Function and Modules in Python
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Except Handling and File Handling in python
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            See more types in python
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Functional programming in python
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">
+            Object Oriented programming in python
+          </button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">Regular expressions</button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="collapsible">Create GUI</button>
+          <div class="content">
+            <p>Introduction to the course</p>
+          </div>
+        </div>
       </div>
       <button class="mview">Read More</button>
     </section>
@@ -896,12 +963,24 @@
         </ul>
       </div>
     </footer>
-    <script>
-      const button = document.getElementById("slide");
 
-      button.onclick = function () {
-        document.getElementById("next").scrollLeft += 200;
-      };
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            content.style.padding = "0";
+          } else {
+            content.style.padding = "0rem 4rem 4rem";
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
     </script>
     <script
       type="module"
