@@ -13,6 +13,291 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+.enroll-now {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: conic-gradient(
+    from 0.3turn at 50% center,
+    rgb(128, 7, 128) 35%,
+    rgba(128, 7, 128, 0.77) 40%,
+    rgb(128, 7, 128) 44%,
+    rgb(128, 7, 128) 45%,
+    rgba(128, 7, 128, 0.77) 46%,
+    rgb(128, 7, 128) 49%,
+    rgb(128, 7, 128),
+    rgba(128, 7, 128, 0.77) 90%,
+    rgb(128, 7, 128) 95%,
+    rgba(128, 7, 128, 0.77) 95%,
+    rgb(128, 7, 128) 98%
+  );
+  box-shadow: rgb(0, 0, 0, 25%) 0px 4px 5px;
+  display: none;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  max-width: 35rem;
+  border-radius: 4rem;
+}
+
+/* The Close Button */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-weight: 400;
+  background-color: red;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+
+/* Full-width input fields */
+.container a.disFlex {
+  background-color: #fcf8f8;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  width: 80%;
+  font-size: 1.2rem;
+  color: #8a158a;
+  margin: 2rem auto;
+  height: 4rem;
+  padding: 2rem;
+  box-shadow: rgb(0, 0, 0, 25%) 0px 4px 5px;
+}
+.container a.disFlex:active {
+  box-shadow: none;
+}
+.container h3 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  color: #000;
+}
+.google {
+  width: 2.5rem;
+}
+.border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.17rem;
+  margin: 1rem auto;
+  border-radius: 0.87rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.6, #b671cf),
+    color-stop(0.1, #3a30aa)
+  );
+}
+.border input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.border input {
+  width: 87.5%;
+  height: 4rem;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+.border svg {
+  width: 12%;
+  height: 2rem;
+  background-color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  height: 4rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signupbtn {
+  width: 80%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  box-shadow: none;
+}
+.orLogin {
+  display: block;
+}
+.checkandforgot {
+  display: flex;
+  color: #8a158a;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+.checkandforgot a {
+  color: #8a158a;
+  font-size: 1.2rem;
+}
+.check {
+  justify-content: flex-start;
+  align-items: center;
+}
+.check span {
+  font-size: 1rem;
+}
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  font-size: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  z-index: 1;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.2rem;
+  border: #8a158a solid 0.1rem;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: #8a158a1a;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 0.49rem;
+  top: 0.1rem;
+  width: 0.3rem;
+  height: 0.8rem;
+  border: solid #8a158a;
+  border-width: 0 0.1rem 0.1rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.orLogin {
+  color: #8a158a;
+  font-size: 1.3rem;
+}
+.orLogin strong {
+  cursor: pointer;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/************modal************/
+
+/***************dropdown***************/
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  font-size: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0.8rem;
+}
+
+.dropdown-content a {
+  font-size: 1.4rem;
+  text-align: right;
+  padding: 12px 16px;
+  border-radius: 0.8rem;
+  transition: all 0.5s;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:active {
+  color: white;
+  background: linear-gradient(to bottom, #b671cf, #3a30aa);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  opacity: 0.5;
+}
+/*********************************/
 .disFlex,
 .categories {
   -ms-overflow-style: none; /* IE and Edge */
@@ -467,36 +752,57 @@ h3 {
 }
 .recipe img {
   width: 45%;
+  height: 28rem;
   border-radius: 1rem;
+  transition: all 0.5s;
 }
 .recipe ul {
+  padding: 2rem;
+  align-self: center;
   width: 45%;
+  height: 34rem;
+  list-style: none;
 }
+
 .recipe ul li {
+  transition: all 0.5s;
   position: relative;
   margin-bottom: 6rem;
   font-size: 1.6rem;
   font-weight: 500;
-  padding-left: 5rem;
+  padding-left: 2.4rem;
   text-align: left;
 }
-.recipe ul li:last-child {
-  margin-bottom: 0;
+
+.li-cont {
+  position: relative;
 }
-.recipe ul li:after {
+
+.recipe li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.act {
+  font-size: 2rem !important;
+}
+
+.recipe ul .after {
   /* bullets */
-  content: url("iconmonstr-triangle-1-2401.png");
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   left: -13px; /*adjust manually*/
-  top: 0px;
+  top: 1px;
   border-radius: 0.8rem;
   width: 4rem;
   height: 4rem;
-  background: white;
+  background: rgb(240, 240, 240);
   transform: translate(-50%, -30%);
+}
+.after-act {
+  width: 4.5rem !important;
+  height: 4.5rem;
 }
 .recipe ul li:before {
   /* lines */
@@ -508,10 +814,7 @@ h3 {
   height: 9rem;
   width: 2px;
 }
-.recipe ul li:first-child::after {
-  width: 6rem;
-  height: 6rem;
-}
+
 .recipe ul li:first-child:before {
   top: 2px;
 }
@@ -560,6 +863,10 @@ h3 {
   padding: 0.2rem;
   border: 0.3rem solid #fff;
   fill: #fff;
+}
+video {
+  display: none;
+  height: 20rem;
 }
 
 .curriculum .card:first-of-type {
@@ -1204,9 +1511,11 @@ h3 {
 .full-detail .section {
   padding: 1rem;
 }
+
 .query {
   padding: 0 8%;
   margin: 4rem auto;
+  transition: all 1s;
 }
 .query-grid {
   display: grid;
@@ -1215,33 +1524,62 @@ h3 {
 }
 .query-asked {
   width: 100%;
-  height: 5rem;
   margin: 1.5rem auto;
-  background-color: #d0d0d0;
-
+  background-color: #e0cbe0;
   font-size: 1.6rem;
   text-decoration: none;
   position: relative;
   border-radius: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
 }
-.query-asked a {
-  text-decoration: none;
-  color: black;
+.query-asked p {
   color: #800080;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 87%;
+  height: 5rem;
+  padding: 1.25rem;
 }
+
+.active-query {
+  grid-row: span 3;
+  height: auto;
+}
+
+.query-ans {
+  display: none;
+  height: 100%;
+  color: #000;
+  background-color: #c4c4c4;
+  border-radius: 0 0 0.8rem 0.8rem;
+  padding: 2rem;
+  text-align: justify;
+}
+
+.minus {
+  display: none;
+}
+
 .query-asked button {
   width: 7rem;
   height: 5rem;
   position: absolute;
+  top: 0;
   right: 0;
   border: none;
   border-radius: 0 0.8rem 0.8rem 0;
   background: linear-gradient(to bottom, #b671cf, #3a30aa);
+  z-index: 1;
+  transition: all 1s;
+}
+.button-border {
+  border-radius: 0 0.8rem 0 0 !important;
 }
 
 ::placeholder {
@@ -1292,11 +1630,21 @@ h3 {
   background: linear-gradient(to bottom, #b671cf, #3a30aa);
 }
 footer {
-  background-color: black;
+  background: linear-gradient(
+    180deg,
+    #b771d0 0%,
+    #9961c7 19.39%,
+    #8255c0 39.89%,
+    rgba(82, 62, 178, 0.88) 60.1%,
+    rgba(54, 47, 170, 0.94) 79.74%,
+    #362faa 100%
+  );
   color: white;
   text-align: left;
   padding: 2rem 8%;
   font-weight: 400;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: flex-start !important;
 }
 footer h3 {
@@ -1418,10 +1766,6 @@ footer a {
     width: auto;
   }
 
-  .icons {
-    grid-template-columns: 30px 30px;
-  }
-
   .refund-sec {
     background: #fff;
     color: #800780;
@@ -1540,11 +1884,11 @@ footer a {
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 70%);
     width: 40rem;
   }
-  .recipe ul {
-    width: auto;
+  .card ul {
+    width: 100%;
   }
 
   .video-section {
@@ -1697,6 +2041,10 @@ footer a {
     background: linear-gradient(to bottom, #6144b5, #523cb1);
   }
 
+  .query-grid {
+    grid-template-columns: 1fr;
+  }
+
   .course-benefits {
     width: 95vw;
     padding-bottom: 2rem;
@@ -1743,11 +2091,31 @@ footer a {
   }
 
   footer {
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 8rem;
+  }
+  .social-links {
+    text-align: right;
+  }
+  .icons {
+    justify-content: flex-end;
   }
 }
 
 @media (max-width: 500px) {
+  .enroll-now {
+    display: inline;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 8rem;
+    border-radius: 0;
+    opacity: 1;
+    margin: 0;
+    padding: 3rem;
+  }
   /* html {
     font-size: 62.5%;
     text-align: center;
@@ -1772,7 +2140,7 @@ footer a {
   header {
     /* align-items: flex-end;
     justify-content: space-between; */
-    padding: 5rem 1rem 1.1rem;
+    padding: 1.1rem 1rem 1.1rem;
     background-color: white;
   }
   .logo {
@@ -1877,36 +2245,43 @@ footer a {
     margin-bottom: 0;
     padding-left: 0;
     height: 53rem;
+    color: #3a30aa;
   }
   .recipe .card .disFlex {
-    height: auto;
+    padding-top: 12rem;
   }
   .recipe-head {
     margin: 3rem auto 1rem;
     width: 25rem;
   }
   .recipe ul {
-    list-style: none;
+    width: 100%;
+    height: 30rem;
+    padding-left: 8rem;
   }
   .recipe ul li {
     margin-bottom: 4rem;
-    padding-left: 8rem;
+    padding-left: 4rem;
     font-weight: 600;
   }
-  li.gradText::after,
-  li.gradText::before,
-  li.gradText::marker {
-    margin-left: 4rem !important;
+  .recipe ul .after {
+    background: linear-gradient(to bottom, #b671cf, #3a30aa);
   }
-  .recipe ul li:last-child {
-    margin-bottom: 2rem;
+  .act {
+    font-size: 1.8rem !important;
   }
-  .comp {
-    width: 34rem !important;
-    top: -50% !important;
-    left: 50% !important;
-    transform: translate(-50%, 75%) !important;
-    border-radius: 0.5rem !important;
+  .li-cont-act {
+    width: 5rem;
+    height: 4rem;
+  }
+
+  .recipe .card .disFlex img {
+    width: 34rem;
+    height: 18.5rem;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    border-radius: 0.5rem;
     box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
   }
   .recipe .btn-light {
@@ -1914,10 +2289,11 @@ footer a {
     margin-top: 1rem;
   }
   .bgc-1 {
-    transform: translate(-2.6%);
+    transform: translate(-2.6%, -90.6%);
     width: 100vw;
     background-color: #ededfd;
     margin-top: 2rem;
+    z-index: 999;
   }
   .refund-sec {
     border: solid 0.3rem #8255c0;
@@ -2140,11 +2516,17 @@ footer a {
   }
 
   .query-asked {
-    width: 32rem;
+    width: 38rem;
     height: 4.5rem;
     margin: 1.5rem auto;
     font-size: 1.5rem;
     box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
+  }
+  .active-query {
+    height: auto;
+  }
+  .query-asked p {
+    height: 4.5rem;
   }
   .query-asked button {
     width: 4.5rem;
@@ -2152,7 +2534,7 @@ footer a {
     border-radius: 0 0.8rem 0.8rem 0;
   }
   .search {
-    width: 37rem;
+    width: 40rem;
     height: 4.5rem;
     margin: 3rem auto;
     border-radius: 0.8rem;
@@ -2180,7 +2562,7 @@ footer a {
     z-index: -1;
   }
   .search button {
-    width: 5rem;
+    width: 7rem;
     height: 4.6rem;
     top: -0.1rem;
     border-radius: 0 0.8rem 0.8rem 0;
@@ -2190,9 +2572,6 @@ footer a {
     z-index: 999;
   }
 
-  /* footer h3:first-of-type {
-    margin-top: 0;
-  } */
   footer h3 {
     margin-top: 1.2rem;
     margin-bottom: 0rem;
@@ -2201,5 +2580,20 @@ footer a {
 
   footer ul {
     margin-left: 2rem;
+  }
+}
+@media (max-width: 395px) {
+  html {
+    font-size: 47%;
+  }
+}
+@media (max-width: 376px) {
+  html {
+    font-size: 43%;
+  }
+}
+@media (max-width: 370px) {
+  html {
+    font-size: 40%;
   }
 }
