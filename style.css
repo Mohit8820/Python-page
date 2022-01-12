@@ -13,6 +13,16 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+.name {
+  background: linear-gradient(to bottom, #b671cf, #3a30aa);
+  color: white;
+  font-weight: 500;
+  box-shadow: rgb(0, 0, 0, 25%) 0px 4px 5px;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  display: none;
+}
 .enroll-now {
   color: #fff;
   font-size: 1.8rem;
@@ -495,6 +505,22 @@ main p {
 .rating p:first-of-type {
   font-size: 1.8rem;
 }
+.rating .disFlex {
+  gap: 0.5rem;
+}
+.rating p {
+  margin-bottom: 0;
+}
+.stars {
+  overflow: hidden;
+  position: relative;
+  width: 10.1rem;
+  display: inline-block;
+}
+.stars span {
+  color: yellow;
+  position: absolute;
+}
 .price {
   font-size: 2rem;
   width: 15rem;
@@ -783,7 +809,7 @@ h3 {
   cursor: pointer;
 }
 .act {
-  font-size: 2rem !important;
+  color: #8255c0 !important;
 }
 
 .recipe ul .after {
@@ -799,6 +825,9 @@ h3 {
   height: 4rem;
   background: rgb(240, 240, 240);
   transform: translate(-50%, -30%);
+  background-image: url("Tutedude.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .after-act {
   width: 4.5rem !important;
@@ -1020,7 +1049,7 @@ video {
 }
 .others .intro {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 2rem;
   font-size: 1.8rem;
   width: 80rem;
@@ -1348,6 +1377,10 @@ video {
   font-weight: 500;
   font-size: 2rem;
   border-radius: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -37%);
 }
 
 .about-course {
@@ -1701,6 +1734,12 @@ footer a {
   header {
     justify-content: space-between;
   }
+  .first::before {
+    background: linear-gradient(to bottom, #9d64c7, #8b5ac2);
+  }
+  .second::before {
+    background: linear-gradient(to bottom, #6546b7, #523db1);
+  }
 }
 @media (max-width: 800px) {
   html {
@@ -1737,7 +1776,7 @@ footer a {
     width: 95vw;
   }
   .python {
-    height: 80rem;
+    height: auto;
   }
   .price {
     display: none;
@@ -2035,10 +2074,7 @@ footer a {
     margin-top: 1rem;
   }
   .first::before {
-    background: linear-gradient(to bottom, #935ec4, #8457c0);
-  }
-  .second::before {
-    background: linear-gradient(to bottom, #6144b5, #523cb1);
+    background: linear-gradient(to bottom, #9e64c8, #8959c1);
   }
 
   .query-grid {
@@ -2108,7 +2144,7 @@ footer a {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 999;
+    z-index: 99999;
     width: 100%;
     height: 8rem;
     border-radius: 0;
@@ -2185,7 +2221,6 @@ footer a {
   }
   .python {
     padding: 2rem 3rem;
-    height: 68rem;
     margin-bottom: 0rem !important;
   }
   .python,
@@ -2214,9 +2249,11 @@ footer a {
     width: 80vw;
     margin: 0 auto 2rem;
   }
+  .rating .disFlex {
+    padding-top: 2rem;
+  }
   .rating p {
     text-align: left;
-    width: 80%;
     margin-bottom: 0 !important;
   }
   .price {
@@ -2264,11 +2301,9 @@ footer a {
     padding-left: 4rem;
     font-weight: 600;
   }
-  .recipe ul .after {
-    background: linear-gradient(to bottom, #b671cf, #3a30aa);
-  }
+
   .act {
-    font-size: 1.8rem !important;
+    color: #800780 !important;
   }
   .li-cont-act {
     width: 5rem;
@@ -2444,6 +2479,12 @@ footer a {
     height: 9rem;
     font-size: 1.8rem;
   }
+  .first::before {
+    background: linear-gradient(to bottom, #9760c5, #8658c0);
+  }
+  .second::before {
+    background: linear-gradient(to bottom, #6345b6, #523cb1);
+  }
   .other-courses-card::after {
     right: 2%;
   }
@@ -2580,6 +2621,11 @@ footer a {
 
   footer ul {
     margin-left: 2rem;
+  }
+}
+@media (max-width: 405px) {
+  #slides {
+    max-width: calc(100% - 110px);
   }
 }
 @media (max-width: 395px) {
