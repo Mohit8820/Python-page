@@ -11,6 +11,16 @@ var logbtn = document.getElementById("logBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+$(window).on("navigate", function (event, data) {
+  var direction = data.state.direction;
+  if (direction == "back") {
+    // do something
+    alert("back");
+  }
+  if (direction == "forward") {
+    // do something else
+  }
+});
 window.addEventListener("popstate", detectHistory);
 
 function orlog() {
@@ -220,7 +230,7 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = null;
       content.style.padding = "0";
     } else {
-      content.style.padding = "0rem 2rem 2rem";
+      content.style.padding = "0rem 2rem 1rem";
       content.style.maxHeight = content.scrollHeight + "rem";
     }
   });
