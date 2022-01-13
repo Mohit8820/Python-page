@@ -509,13 +509,17 @@ main p {
 }
 .stars {
   overflow: hidden;
-  position: relative;
-  width: 10.1rem;
+  /* position: relative; */
+  /* width: 10.1rem; */
   display: inline-block;
 }
 .stars span {
-  color: yellow;
-  position: absolute;
+  /* color: yellow;
+  position: absolute; */
+  background: linear-gradient(to right, yellow 50%, transparent 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .price {
   font-size: 2rem;
@@ -1746,9 +1750,6 @@ footer a {
   }
   .second::before {
     background: linear-gradient(to bottom, #6546b7, #523db1);
-  }
-  .stars {
-    width: 10.6rem;
   }
 }
 @media (max-width: 800px) {
