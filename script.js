@@ -24,11 +24,11 @@ function orsign() {
 // When the user clicks the button, open the modal
 logbtn.onclick = function () {
   log.style.display = "block";
-  window.history.pushState("forward", null, "./#forward");
+  window.history.pushState({ id: 1 }, null, "index.html");
 };
 signbtn.onclick = function () {
   sign.style.display = "block";
-  window.history.pushState("forward", null, "./#forward");
+  window.history.pushState({ id: 1 }, null, "index.html");
 };
 
 // When the user clicks on <span> (x), close the modal
