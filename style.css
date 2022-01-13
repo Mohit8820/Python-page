@@ -989,9 +989,10 @@ video {
   justify-content: flex-start;
   gap: 1rem;
 }
-.content svg {
+.content ion-icon {
   fill: #3a30aa;
   width: 2.5rem;
+  height: 2.5rem;
 }
 .content p {
   width: 90%;
@@ -2033,9 +2034,7 @@ footer a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .content svg {
-    fill: #b671cf;
-  }
+
   .curriculum button.mview {
     background-color: #8a158a;
     color: white;
