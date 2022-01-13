@@ -121,41 +121,37 @@ html {
 .border {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 4.17rem;
+  justify-content: flex-start;
+  height: 4rem;
   margin: 1rem auto;
   border-radius: 0.87rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   position: relative;
   z-index: 1;
-  background-image: -webkit-gradient(
+  border: #8255c0 solid 0.1rem;
+  /* background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
     color-stop(0.6, #b671cf),
     color-stop(0.1, #3a30aa)
-  );
+  ); */
 }
 .border input::placeholder {
   font-size: 1.2rem;
   font-weight: 500;
 }
 .border input {
-  width: 87.5%;
-  height: 4rem;
+  width: 100%;
   border: none;
   padding-left: 1rem;
   border-radius: 0 0.8rem 0.8rem 0;
 }
 .border svg {
-  width: 12%;
-  height: 2rem;
+  height: 2.5rem;
+
   background-color: #fff;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  height: 4rem;
-  border-radius: 0.8rem 0 0 0.8rem;
+  margin: 0.5rem;
 }
 
 /* Float cancel and signup buttons and add an equal width */
@@ -928,7 +924,7 @@ video {
   color: #3a30aa;
   padding: 4rem;
 }
-.curriculum .steps div {
+.curriculum .steps .each-step {
   cursor: pointer;
   background-color: #fff;
   border-radius: 1rem;
@@ -983,6 +979,17 @@ video {
   overflow: hidden;
   box-shadow: none !important;
   /* background-color: #f1f1f1; */
+}
+.content .disFlex {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.content svg {
+  fill: #3a30aa;
+  width: 2.5rem;
+}
+.content p {
+  width: 90%;
 }
 /****************collapsible************************/
 
@@ -2020,6 +2027,9 @@ footer a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .content svg {
+    fill: #b671cf;
   }
   .curriculum button.mview {
     background-color: #8a158a;

@@ -207,3 +207,34 @@ function video_open() {
   document.getElementById("video-button").style.background = "transparent";
   lightBoxVideo.play();
 }
+
+/******************course step**************** */
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      content.style.padding = "0";
+    } else {
+      content.style.padding = "0rem 2rem 2rem";
+      content.style.maxHeight = content.scrollHeight + "rem";
+    }
+  });
+}
+
+var read = document.getElementById("read");
+read.addEventListener("click", function () {
+  this.style.display = "none";
+  var content = this.nextElementSibling;
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+    content.style.padding = "0";
+  } else {
+    content.style.padding = "0rem 2rem 2rem";
+    content.style.maxHeight = content.scrollHeight + "rem";
+  }
+});
