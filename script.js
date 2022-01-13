@@ -11,21 +11,6 @@ var logbtn = document.getElementById("logBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-$(window).on("navigate", function (event, data) {
-  var direction = data.state.direction;
-  if (direction == "back") {
-    // do something
-    alert("back");
-  }
-  if (direction == "forward") {
-    // do something else
-  }
-});
-$(document).keypress(function (e) {
-  if (e.keyCode == 4) {
-    alert();
-  }
-});
 window.addEventListener("popstate", detectHistory);
 
 function orlog() {
@@ -39,11 +24,11 @@ function orsign() {
 // When the user clicks the button, open the modal
 logbtn.onclick = function () {
   log.style.display = "block";
-  window.history.pushState({ id: 1 }, null, "index.html");
+  window.history.pushState("forward", null, "./#forward");
 };
 signbtn.onclick = function () {
   sign.style.display = "block";
-  window.history.pushState({ id: 1 }, null, "index.html");
+  window.history.pushState("forward", null, "./#forward");
 };
 
 // When the user clicks on <span> (x), close the modal

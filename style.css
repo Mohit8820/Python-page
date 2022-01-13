@@ -143,6 +143,7 @@ html {
 }
 .border input {
   width: 100%;
+  height: 100%;
   border: none;
   padding-left: 1rem;
   border-radius: 0 0.8rem 0.8rem 0;
