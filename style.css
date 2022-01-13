@@ -510,7 +510,7 @@ main p {
 .stars {
   overflow: hidden;
   position: relative;
-  width: 10.4rem;
+  width: 10.1rem;
   display: inline-block;
 }
 .stars span {
@@ -1746,6 +1746,9 @@ footer a {
   }
   .second::before {
     background: linear-gradient(to bottom, #6546b7, #523db1);
+  }
+  .stars {
+    width: 10.6rem;
   }
 }
 @media (max-width: 800px) {
