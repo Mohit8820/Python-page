@@ -21,6 +21,11 @@ $(window).on("navigate", function (event, data) {
     // do something else
   }
 });
+$(document).keypress(function (e) {
+  if (e.keyCode == 4) {
+    alert();
+  }
+});
 window.addEventListener("popstate", detectHistory);
 
 function orlog() {
