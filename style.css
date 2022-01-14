@@ -23,6 +23,14 @@ html {
   border-radius: 0.5rem;
   display: none;
 }
+.dropdown-content.name-dropdown {
+  min-width: 100px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.dropdown-content.name-dropdown a {
+  text-align: center;
+}
 .enroll-now {
   color: #fff;
   font-size: 1.8rem;
