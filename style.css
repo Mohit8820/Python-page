@@ -1024,15 +1024,29 @@ video {
 }
 .course-benefits .disFlex {
   gap: 2rem;
+  align-items: stretch;
+  justify-content: start;
 }
 .course-benefits .disFlex p {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 1rem;
-  line-height: 3rem;
+  text-align: left;
 }
-.course-benefits .card svg {
+.course-benefits .card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.course-benefits .card .book {
   fill: white;
+  width: 10%;
+  max-width: 2rem;
+  height: 2rem;
+  margin-top: 0.3rem;
 }
 
 .others {
@@ -2123,7 +2137,7 @@ footer a {
     background: none;
     margin: 0;
     width: auto;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .course-for {
@@ -2518,9 +2532,9 @@ footer a {
     -webkit-text-fill-color: white;
     margin-bottom: 1rem;
   }
-  .course-benefits .disFlex p {
+  /* .course-benefits .disFlex p {
     line-height: 4rem;
-  }
+  } */
 
   .about-course-sec {
     background: linear-gradient(to bottom, #fff 70%, #ecd9ec 50%);
